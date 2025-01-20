@@ -2833,21 +2833,34 @@ h4.package {
 .no-cursor .cursor {
     background-color: transparent;
 }
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between the image and the text */
+}
 
 .profile-rhombus {
-    width: 1in; /* Set width to 1 inch */
-    height: 1in; /* Set height to 1 inch */
+    width: 1in; /* 1-inch width */
+    height: 1in; /* 1-inch height */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Optional: Add a background color */
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Creates a rhombus */
-    margin-top: 20px; /* Adds space above the image */
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Rhombus shape */
 }
 
 .profile-img {
-    width: 100%; /* Ensure the image fills the rhombus */
+    width: 100%; /* Ensures the image fits the rhombus */
     height: 100%;
-    object-fit: cover; /* Ensures the image fits the shape without distortion */
+    object-fit: cover; /* Maintains aspect ratio */
     border-radius: 50%;
+}
+
+.profile-text h1,
+.profile-text h2 {
+    margin: 0; /* Removes default margins for better alignment */
+}
+
+.profile-text h1 span {
+    display: block; /* Moves the "Hi, I'm" to its own line */
 }
