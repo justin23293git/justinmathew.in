@@ -2833,3 +2833,10 @@ h4.package {
 .no-cursor .cursor {
     background-color: transparent;
 }
+
+.profile-img {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    margin-top: 20px; /* Adds space above the image */
+}
