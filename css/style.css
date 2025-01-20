@@ -2834,9 +2834,20 @@ h4.package {
     background-color: transparent;
 }
 
-.profile-img {
-    width: 150px; /* Adjust the size as needed */
-    height: auto;
-    border-radius: 50%; /* Makes the image circular */
+.profile-rhombus {
+    width: 1in; /* Set width to 1 inch */
+    height: 1in; /* Set height to 1 inch */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Optional: Add a background color */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Creates a rhombus */
     margin-top: 20px; /* Adds space above the image */
+}
+
+.profile-img {
+    width: 100%; /* Ensure the image fills the rhombus */
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits the shape without distortion */
+    border-radius: 50%;
 }
