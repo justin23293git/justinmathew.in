@@ -2836,7 +2836,6 @@ h4.package {
 .profile-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adds space between the image and the text */
 }
 
 .profile-rhombus {
@@ -2847,6 +2846,8 @@ h4.package {
     align-items: center;
     background-color: #fff;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Rhombus shape */
+    margin-right: 15px; /* Space between image and text */
+    cursor: pointer; /* Indicates image is clickable */
 }
 
 .profile-img {
@@ -2854,13 +2855,64 @@ h4.package {
     height: 100%;
     object-fit: cover; /* Maintains aspect ratio */
     border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
 }
 
 .profile-text h1,
-.profile-text h2 {
+.profile-text h2,
+.profile-text p {
     margin: 0; /* Removes default margins for better alignment */
 }
 
-.profile-text h1 span {
-    display: block; /* Moves the "Hi, I'm" to its own line */
+.profile-text h1 {
+    font-size: 1.2em;
+}
+
+.profile-text h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.profile-text p {
+    font-size: 1em;
+    color: #888; /* Light gray for the job title */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    padding-top: 60px;
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    transition: transform 0.25s ease; /* Smooth image transition */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
 }
