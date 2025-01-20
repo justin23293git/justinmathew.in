@@ -36,16 +36,25 @@
             <div class="name-block">
                 <div class="name-block-container">
                     <h1><span>Hi, I'm</span>Justin Mathew</h1>
-                    <h2>Sr. Software Engineer</h2>    
-                <div class="profile-container">
+                    <h2>Sr. Software Engineer</h2>  
+                    <div class="profile-container">
     <div class="profile-rhombus">
-        <img src="images/profile-picture.jpg" alt="Justin Mathew" class="profile-img" />
+        <img src="images/profile-picture.jpg" alt="Justin Mathew" class="profile-img" onclick="openImageModal()" />
     </div>
     <div class="profile-text">
-        <h1><span>Hi, I'm</span> Justin Mathew</h1>
-        <h2>Sr. Software Engineer</h2>
+        <h1>Hi, I'm</h1>
+        <h2>JUSTIN MATHEW</h2>
+        <p>SR. SOFTWARE ENGINEER</p>
     </div>
 </div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal" onclick="closeImageModal()">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+</div>
+                    
+                </div>
                     <a target="_blank" href="http://justinmathew.in/Justin_Mathew_resume.pdf" class="btn btn-download">Download Resume</a>
                     <a target="_blank" href="https://1947.justinmathew.in/" class="btn btn-download">My Blog site</a>
                 </div>
